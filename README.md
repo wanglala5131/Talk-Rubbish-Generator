@@ -3,10 +3,10 @@
 
 
 ## 環境建置與需求
-node.js v10.15.0 -執行環境
-express v4.17.1 -框架
-express-handlebars v4.0.4 -模板引擎
-body-parser v4.0.4 -套件
+* node.js v10.15.0 -執行環境
+* express v4.17.1 -框架
+* express-handlebars v4.0.4 -模板引擎
+* body-parser v4.0.4 -套件
 
 
 ## 安裝與使用
