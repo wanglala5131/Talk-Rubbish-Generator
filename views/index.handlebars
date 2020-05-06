@@ -1,0 +1,52 @@
+<!--body-->
+<div class="container d-flex flex-column">
+  <h1 class="text-center mt-4 mb-4">你想對誰說幹話？</h1>
+  <form action="/" method="POST">
+    <div class="option row d-flex justify-content-center">
+
+      <label class="card m-2" style="width: 18rem;">
+        <div class="img-box">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            class="card-img-top">
+        </div>
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <input type="radio" name="jobs" id="engineer" value="engineer" {{#if (keep jobs 'engineer')}}checked{{/if}}>
+          <p>工程師</p>
+        </div>
+      </label>
+      <label class="card m-2" style="width: 18rem;">
+        <div class="img-box">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            class="card-img-top">
+        </div>
+
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <input type="radio" name="jobs" id="designer" value="designer" {{#if (keep jobs 'designer')}}checked{{/if}}>
+          <p>設計師</p>
+        </div>
+      </label>
+      <label class="card m-2" style="width: 18rem;">
+        <div class="img-box">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            class="card-img-top">
+        </div>
+
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <input type="radio" name="jobs" id="entrepreneur" value="entrepreneur"
+            {{#if (keep jobs 'entrepreneur')}}checked{{/if}}>
+          <p>創業家</p>
+        </div>
+      </label>
+    </div>
+    <div class="generator d-flex justify-content-center mt-4">
+      <div class="d-flex align-items-start">
+        <button class="btn btn-secondary mr-2" type="submit">產生幹話</button>
+        <div class="results flex-grow-1 d-flex justify-content-center align-items-center">
+          <p>{{ results }}</p>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+</div>
