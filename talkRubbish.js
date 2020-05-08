@@ -23,7 +23,7 @@ function talkRubbish(jobs) {
 
   for (let thing in task) {
     //console.log(thing)  key
-    //console.log(task[thing].length)  value
+    //console.log(task[thing])  value
     if (jobs === thing) {
       const length = task[thing].length
       results = `身為${turnToChinese(jobs)}，${task[thing][Math.floor(Math.random() * length)]}，${phrase[Math.floor(Math.random() * length)]}吧！`
