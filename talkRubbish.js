@@ -33,9 +33,6 @@ function talkRubbish(jobs) {
   }
 
   return results
-
-
-
 }
 
 module.exports = talkRubbish
