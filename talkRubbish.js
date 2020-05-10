@@ -19,20 +19,34 @@ function talkRubbish(jobs) {
         return '創業家'
     }
   }
+  function randomIndex(array) {
+    let length = array.length
+    let random = Math.floor(Math.random() * length)
+    return random
+  }
   let results
+
 
   for (let thing in task) {
     //console.log(thing)  key
-    //console.log(task[thing])  value
+    //console.log(task[thing].length)  value
     if (jobs === thing) {
-      const length = task[thing].length
-      results = `身為${turnToChinese(jobs)}，${task[thing][Math.floor(Math.random() * length)]}，${phrase[Math.floor(Math.random() * length)]}吧！`
-    } else {
-      return `(請選擇上列任一職業)`
+      results = `身為${turnToChinese(jobs)}，${task[thing][randomIndex(task[thing])]}，${phrase[randomIndex(task[thing])]}吧！`
     }
   }
 
+
   return results
+  if (!jobs) {
+    return `(請選擇上列任一職業)`
+  }
+
 }
+
+
+
+//turnToChinese('engineer')
+
+talkRubbish('entrepreneur')
 
 module.exports = talkRubbish
